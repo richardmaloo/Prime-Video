@@ -11,9 +11,4 @@ export default {
             titles: Object.keys(apiUrls)
         }
     }
-    // created () {
-    //     Object.keys(apiUrls).forEach(url => {
-
-    //     })
-    // }
 }

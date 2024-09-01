@@ -40,12 +40,7 @@
             gap: 30px;
 
             &__brand-name {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-weight: bold;
-            }
-
-            &__navigation-links {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
         }
 
