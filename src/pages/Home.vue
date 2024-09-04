@@ -1,5 +1,8 @@
 <template>
     <div class="home">
+        <HomeBanner
+            :movie-category="titles[0]"
+        />
         <HomeRowMovies
             v-for="movie in titles"
             :title="movie"
@@ -13,7 +16,6 @@
     .home {
         background-color: #00050D;
         min-height: 100vh;
-        margin-left: 40px;
         overflow-x: hidden;
     }
 </style>

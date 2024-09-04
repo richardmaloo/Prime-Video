@@ -1,21 +1,15 @@
 import httpApi from "@/utils/http-api"
 import apiUrls from "@/config/api-urls"
-import HomeCardMovie from "../HomeCardMovie.vue"
+import HomeCardMovie from "@/components/home/HomeCardMovie.vue"
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
 
 export default {
-    name: 'home-row-movies',
+    name: 'detail-related-movie',
     components: {
         HomeCardMovie,
         VueperSlide,
         VueperSlides
-    },
-    props: {
-        title: {
-            type: String,
-            required: true
-        }
     },
 
     data () {
@@ -25,12 +19,12 @@ export default {
     },
 
     created () {
-        this.getMovie()
+        this.getRelatedMovies()
     },
 
     methods: {
-        async getMovie () {
-            const response = await httpApi.getRequest(apiUrls[this.title])
+        async getRelatedMovies () {
+            const response = await httpApi.getRequest(apiUrls.Related(this.$route.params.id))
             this.movies = response.data.results
         },
 

@@ -1,9 +1,9 @@
 <template>
-    <div class="home-row-movies">
-        <div class="home-row-movies__header header">
-            {{ title }}
+    <div class="detail-related-movie">
+        <div class="detail-related-movie__header header">
+            Related
         </div>
-        <div class="home-row-movies__cards cards">
+        <div class="detail-related-movie__cards cards">
         <vueper-slides 
             :bullets="false"
             :visible-slides="9"
@@ -25,10 +25,10 @@
     </div>
 </template>
 
-<script src="./js/home-row-movies.js"></script>
+<script src="./js/detail-related-movie.js"></script>
 
 <style scoped lang="scss">
-    .home-row-movies {
+    .detail-related-movie {
         margin-left: 40px;
 
         .header {

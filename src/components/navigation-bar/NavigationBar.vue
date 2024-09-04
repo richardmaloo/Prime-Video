@@ -25,7 +25,7 @@
     .navigation-bar {
         width: 90%;
         height: 80px;
-        background-color: #00050D;
+        background-color: #141921;
         color: white;
         margin: auto;
         border-bottom-left-radius: 10px;

@@ -1,9 +1,14 @@
 const API_KEY='9231b92caa6e9a12be4d27928963ac07'
 
 export default {
-    Action: `/movie/now_playing?api_key=${API_KEY}&region=US&with_genres=28`,
-    Comedy: `/movie/now_playing?api_key=${API_KEY}&region=US&with_genres=35`,
-    Horror: `/movie/now_playing?api_key=${API_KEY}&region=US&with_genres=27`,
-    Romance: `/movie/now_playing?api_key=${API_KEY}&region=US&with_genres=10749`,
-    Documentaries: `/movie/now_playing?api_key=${API_KEY}&region=US&with_genres=99`
+    Originals: `/discover/tv?api_key=${API_KEY}&with_networks=21`,
+    Trending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
+    'Top Rated': `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
+    Action: `/discover/movie?api_key=${API_KEY}&with_genres=28`,
+    Comedy: `/discover/movie?api_key=${API_KEY}&with_genres=35`,
+    Horror: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
+    RomCom: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
+    Documentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
+    Detail: (id) => `/movie/${id}?api_key=${API_KEY}`,
+    Related: (id) => `/movie/${id}/similar?api_key=${API_KEY}`
 }
