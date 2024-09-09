@@ -24,13 +24,25 @@ export default {
         }
     },
 
+    computed: {
+        URL () {
+            if (this.$route.name === 'Movies') {
+                return apiUrls.Movies[this.title]
+            } else if (this.$route.name === 'TV Shows') {
+                return apiUrls['TV Shows'][this.title]
+            } else {
+                return apiUrls[this.title]
+            }
+        }
+    },
+
     created () {
         this.getMovie()
     },
 
     methods: {
         async getMovie () {
-            const response = await httpApi.getRequest(apiUrls[this.title])
+            const response = await httpApi.getRequest(this.URL)
             this.movies = response.data.results
         },
 

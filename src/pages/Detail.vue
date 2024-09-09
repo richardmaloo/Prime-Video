@@ -3,7 +3,9 @@
         <DetailMovieInfo
             :movie-detail="movieDetail"
         />
-        <DetailRelatedMovie
+        <DetailRelatedMovie 
+            :key="uniqueKey"
+            @refresh-movie="refreshMovie"
         />
     </div>
 </template>

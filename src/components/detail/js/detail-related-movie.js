@@ -29,12 +29,13 @@ export default {
         },
 
         goToDetailPage (movieId) {
-            this.$router.push({
-                name: 'Detail',
-                params: {
-                    id: movieId
-                }
-            })
+            this.$emit('refresh-movie', movieId)
+            // this.$router.push({
+            //     name: 'Detail',
+            //     params: {
+            //         id: movieId
+            //     }
+            // })
         }
     }
 }

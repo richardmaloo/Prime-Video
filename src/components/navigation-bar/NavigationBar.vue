@@ -1,12 +1,20 @@
 <template>
     <div class="navigation-bar">
         <div class="navigation-bar__left-section left-section">
-            <div class="left-section__brand-name">Prime Video</div>
-            <div class="left-section__navigation-links">Home</div>
-            <div class="left-section__navigation-links">Movies</div>
-            <div class="left-section__navigation-links">TV Shows</div>
-            <div class="left-section__navigation-links">Sports</div>
-            <div class="left-section__navigation-links">Live TV</div>
+            <div class="left-section__brand-name">
+                <router-link to="/" class="left-section__link">Prime Video</router-link>
+            </div>
+            <div class="left-section__navigation-item">
+                <router-link to="/" class="left-section__link">Home</router-link>
+            </div>
+            <div class="left-section__navigation-item">
+                <router-link to="/movies" class="left-section__link">Movies</router-link>
+            </div>
+            <div class="left-section__navigation-item">
+                <router-link to="/tv-shows" class="left-section__link">TV Shows</router-link>
+            </div>
+            <div class="left-section__navigation-item">Sports</div>
+            <div class="left-section__navigation-item">Live TV</div>
         </div>
         <div class="navigation-bar__right-section right-section">
             <el-icon>
@@ -42,6 +50,11 @@
             &__brand-name {
                 font-weight: bold;
             }
+
+            &__link {
+                text-decoration: none;
+                color: white;
+            }
         }
 
         .right-section {
@@ -49,6 +62,4 @@
             gap: 20px;
         }
     }
-
-
 </style>

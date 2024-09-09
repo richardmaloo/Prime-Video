@@ -13,6 +13,7 @@ export default {
     data () {
         return {
             movieDetail: {},
+            uniqueKey: 0
         }
     },
 
@@ -24,7 +25,21 @@ export default {
         async getMovieDetail () {
             const response = await httpApi.getRequest(apiUrls.Detail(this.$route.params.id))
             this.movieDetail = response.data
-            console.log(response)
         },
+
+        async refreshMovie (movieId) {
+            await this.$router.push({
+                name: 'Detail',
+                params: {
+                    id: movieId
+                }
+            })
+            this.getMovieDetail()
+            this.reloadComponent()
+        },
+
+        reloadComponent () {
+            this.uniqueKey += 1
+        }
     }
 }

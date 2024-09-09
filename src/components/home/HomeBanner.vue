@@ -5,7 +5,7 @@
     >
         <div class="home-banner__contents contents">
             <div class="contents__title">
-                {{ movie.original_name }}
+                {{ movie.original_name || movie.original_title }}
             </div>
             <div class="contents__description">
                 {{ movie.overview }}
